@@ -62,5 +62,19 @@ namespace WebApplication2.Controllers
 
         }
 
+
+        [HttpDelete]
+        [Route("{id:int}")]
+        public async Task<ActionResult<Produto>> DeleteById([FromServices] DataContext context, int id)
+        {
+            var produtos = await context.Produto.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+            context.Produto.Remove(produtos);
+            await context.SaveChangesAsync();
+            return produtos;
+
+        }
+
+
+
     }
 }
