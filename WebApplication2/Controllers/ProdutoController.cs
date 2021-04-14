@@ -35,7 +35,7 @@ namespace WebApplication2.Controllers
         [HttpPost]
         [Route("")]
         public async Task<ActionResult<Produto>>
-      Post([FromServices] DataContext context, [FromBody] Produto model)
+        Post([FromServices] DataContext context, [FromBody] Produto model)
         {
             if (ModelState.IsValid)
             {
