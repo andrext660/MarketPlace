@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3LDov3YLVY9WHsGZWPX5Va5+gpBu/Lhy/Q5uj40DgeTeNGKqSIWq8ilChbyHxy9ZbCGsAhZrfY2P484L0R0JfA==",
+  "dgSpecHash": "fbvmWFpgBtWSSyGkfJvbd9xe5CsdqrUuF583xza8MAHUs5mbx+eBovYKjurOSLt/txwbhw5OvEGsOQlas6IfLQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Andre\\source\\repos\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+  "projectFilePath": "C:\\Users\\Andre\\source\\repos\\WebApplication2\\WebApplication2\\MarketPlace.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andre\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

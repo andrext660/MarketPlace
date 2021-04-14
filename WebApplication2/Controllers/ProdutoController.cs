@@ -11,12 +11,10 @@ namespace WebApplication2.Controllers
 {
 
     [ApiController]
-    [Route("v1/produtos")]
+    [Route("api/produtos")]
     public class ProdutoController : ControllerBase
     {
 
-
-        
 
         public async Task<ActionResult<List<Produto>>> Get([FromServices] DataContext context)
         {
@@ -29,19 +27,9 @@ namespace WebApplication2.Controllers
         [Route("{id:int}")]
         public async Task<ActionResult<Produto>> GetById([FromServices] DataContext context, int id)
         {
-            var produtos = await context.Produto.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+            var produtos = await context.Produto.FirstOrDefaultAsync(x => x.Id == id);
             return produtos;
         }
-
-
-        //[HttpGet]
-        //[Route("produtos/{id:int}")]
-        //public async Task<ActionResult<List<Produto>>> GetByProduto([FromServices] DataContext context, int id)
-        //{
-        //    var produtos = await context.Produto.Include(x => x.Id).AsNoTracking().Where(x => x.Id == id).ToListAsync();
-        //    return produtos;
-        //}
-
 
 
         [HttpPost]
@@ -67,9 +55,10 @@ namespace WebApplication2.Controllers
         [Route("{id:int}")]
         public async Task<ActionResult<Produto>> DeleteById([FromServices] DataContext context, int id)
         {
-            var produtos = await context.Produto.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+            var produtos = await context.Produto.FirstOrDefaultAsync(x => x.Id == id);
             context.Produto.Remove(produtos);
             await context.SaveChangesAsync();
+
             return produtos;
 
         }

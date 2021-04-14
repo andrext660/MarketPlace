@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MarketPlace.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,22 +11,16 @@ namespace WebApplication2.Models
     public class Compra
     {
         [Key]
-        public int Id;
-       
-        [Required]
-        public int Qtde_Comprada {get;set;}
-        public string Titular { get; set; }
-        public int Numero { get; set; }
+        public int IdCompra { get; set; }
 
-        public string Data_Expiracao { get; set; }
-        public string Bandeira { get; set; }
-        public int Cvv { get; set; }
-
-        [Required]
         public int ProdutoId { get; set; }
+        public int Qtde_Comprada { get; set; }
+        public int CartaoId { get; set; }
+        public Cartao Cartao { get; set; }
+
         public Produto Produto { get; set; }
 
 
-
+      
     }
 }

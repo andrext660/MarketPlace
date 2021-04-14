@@ -675,9 +675,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andre\\source\\repos\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
-      "projectName": "WebApplication2",
-      "projectPath": "C:\\Users\\Andre\\source\\repos\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+      "projectUniqueName": "C:\\Users\\Andre\\source\\repos\\WebApplication2\\WebApplication2\\MarketPlace.csproj",
+      "projectName": "MarketPlace",
+      "projectPath": "C:\\Users\\Andre\\source\\repos\\WebApplication2\\WebApplication2\\MarketPlace.csproj",
       "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Andre\\source\\repos\\WebApplication2\\WebApplication2\\obj\\",
       "projectStyle": "PackageReference",

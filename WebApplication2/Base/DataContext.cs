@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using MarketPlace.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace WebApplication2.Base
         }
 
         public DbSet<Produto> Produto { get; set; }
-        public DbSet <Categoria> Categorias { get; set; }
+        public DbSet<Compra> Compras { get; set; }
+        public DbSet<Cartao> Cartoes { get; set; }
     }
 }

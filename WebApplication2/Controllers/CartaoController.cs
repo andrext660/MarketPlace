@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MarketPlace.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,28 +12,29 @@ namespace WebApplication2.Controllers
 {
 
     [ApiController]
-    [Route("v1/categorias")]
+    [Route("api/cartao")]
     
-    public class CategoriaController: ControllerBase
+    public class CartaoController: ControllerBase
     {
         [HttpGet]
         [Route("")]
-
-        public async Task<ActionResult<List<Categoria>>> Get([FromServices] DataContext context)
+        public async Task<ActionResult<List<Cartao>>> Get([FromServices] DataContext context)
         {
-            var categorias = await context.Categorias.ToListAsync();
-            return categorias;
+            var cartao = await context.Cartoes.ToListAsync();
+
+            return cartao;
         }
 
         [HttpPost]
         [Route("")]
-        public async Task<ActionResult<Categoria>> 
-        Post([FromServices] DataContext context, [FromBody] Categoria model)
+        public async Task<ActionResult<Cartao>> 
+        Post([FromServices] DataContext context, [FromBody] Cartao model)
         {
             if (ModelState.IsValid)
             {
-                context.Categorias.Add(model);
+                context.Cartoes.Add(model);
                 await context.SaveChangesAsync();
+
                 return model;
             }
             else
