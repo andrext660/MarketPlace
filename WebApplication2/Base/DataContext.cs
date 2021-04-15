@@ -19,5 +19,6 @@ namespace WebApplication2.Base
         public DbSet<Produto> Produto { get; set; }
         public DbSet<Compra> Compras { get; set; }
         public DbSet<Cartao> Cartoes { get; set; }
+        public DbSet<Pagamento> Pagamentos { get; set; }
     }
 }

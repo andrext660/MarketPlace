@@ -12,3 +12,5 @@ Este projeto simula uma API REST que realiza cadastro e compra de produtos.
 - Após esse passo será necessário cadastrar um cartão de crédito
 - Para concretizar a compra será preciso informar o id do produto, a quantidade comprada e o id do cartão.
 - Como resultado será listado os dados do titular do cartão e o produto comprado com estoque atualizado.
+
+- Na parte de realizar pagamento será necessario informar um valor de compra e o ID do cartão do Titular.
